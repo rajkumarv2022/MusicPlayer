@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function LandingPage() {
+export default function Tamil() {
   return (
     <div>
-      LandingPage
+      Tamil
     </div>
   )
 }
