@@ -15,7 +15,7 @@ export default function Main() {
         </nav>
       </div>
 
-      <div className='text-white mt-4'>
+      <div className='text-white mt-4 flex flex-col gap-10'>
 
         <nav className='columns-3 text-center'>
         <div className='py-20 bg-pink-500 border border-white rounded-lg mb-4 cursor-pointer'><button className=''>Tamil</button></div>
@@ -26,11 +26,51 @@ export default function Main() {
         <div className='py-20 bg-pink-500 border border-white rounded-lg mb-4 cursor-pointer'><button className=''>Hindi</button></div>
         </nav>
 
-        <div id='history'>
+        <div id='history' className='flex flex-col gap-4'>
+
+          <p className='font-bold text-xl'>History</p>
+
+          <div className='flex flex-row gap-6'>
+
+            <div>
+              <img src="https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&w=600" className='h-60 w-50' alt="" />
+              <p className=''>Title</p>
+              <p className='text-gray-400'>singer</p>
+
+            </div>
+
+            <div>
+
+              <img src="https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&w=600" className='h-60 w-50' alt="" />
+              <p className=''>Title</p>
+              <p className='text-gray-400'>singer</p>
+
+            </div>
+
+          </div>
+          
 
         </div>
 
-        <div id='madeforyou'>
+        <div id='madeforyou' className='flex flex-col gap-4'>
+
+          <p className='font-bold text-xl'>Made for You</p>
+
+          <div className='flex flex-row gap-6'>
+
+            <div>
+              <img src="https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&w=600" className='h-60 w-50' alt="" />
+              <p className=''>Title</p>
+              <p className='text-gray-400'>singer</p>
+           </div>
+
+           <div>
+              <img src="https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&w=600" className='h-60 w-50' alt="" />
+              <p className=''>Title</p>
+              <p className='text-gray-400'>singer</p>
+            </div>
+
+          </div>
 
         </div>
 

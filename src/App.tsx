@@ -5,6 +5,7 @@ import Login from './component/Login'
 import LandingPage from './component/LandingPage'
 import Main from './component/Main'
 import SignupPage from './component/SignupPage'
+import AddSong from './Admin/AddSong'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/login' Component={Login}></Route>
           <Route path='/signup' Component={SignupPage}></Route>
           <Route path='/main' Component={Main}></Route>
+          <Route path="/admin/:id/addSong" Component={AddSong}></Route>
 
         </Routes>
 
