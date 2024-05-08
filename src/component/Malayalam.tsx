@@ -26,7 +26,7 @@ export default function Malayalam() {
       .then((response) => response.json())
       .then((data) => {
         console.log('API Response:', data);
-        const englishSongs = data.filter((song: { language: string; }) => song.language === "English");
+        const englishSongs = data.filter((song: { language: string; }) => song.language === "Malayalam");
         setSongdetails(englishSongs);
       })
       .catch((error) => {
