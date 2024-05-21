@@ -30,23 +30,25 @@ function App() {
           <Route path='/' Component={LandingPage}></Route>
           <Route path='/login' Component={Login}></Route>
           <Route path='/signup' Component={SignupPage}></Route>
-          <Route path='/main' Component={Main}></Route>
-          <Route path="/admin/:id/addSong" Component={AddSong}></Route>
-          <Route path='/main/song' Component={SongSinglePage}></Route>
-          <Route path='/main/hindi' Component={Hindi}></Route>
-          <Route path='/main/allsong' Component={AllSong}></Route>
-          <Route path='/main/english' Component={English}></Route>
-          <Route path='/main/kannada' Component={Kannadam}></Route>
-          <Route path='/main/malayalam' Component={Malayalam}></Route>
-          <Route path='/main/tamil' Component={Tamil}></Route>
-          <Route path='/main/telungu' Component={Telungu}></Route>
-          <Route path='/main/album' Component={Album}></Route>
+          <Route path='/main/:user_id' Component={Main}></Route>
+          <Route path="/admin/:user_id/addSong" Component={AddSong}></Route>
+          <Route path='/main/:user_id/song/:song_id' Component={SongSinglePage}></Route>
+          <Route path='/main/:user_id/hindi' Component={Hindi}></Route>
+          <Route path='/main/:user_id/allsong' Component={AllSong}></Route>
+          <Route path='/main/:user_id/english' Component={English}></Route>
+          <Route path='/main/:user_id/kannada' Component={Kannadam}></Route>
+          <Route path='/main/:user_id/malayalam' Component={Malayalam}></Route>
+          <Route path='/main/:user_id/tamil' Component={Tamil}></Route>
+          <Route path='/main/:user_id/telungu' Component={Telungu}></Route>
+          <Route path='/main/:user_id/album/:album_id' Component={Album}></Route>
+          {/* <Route path='/main/:user_id/album/:album_id/song/:song_id' Component={SongSinglePage}></Route> */}
 
         </Routes>
 
 
         </Router>
 
+        
   )
 }
 

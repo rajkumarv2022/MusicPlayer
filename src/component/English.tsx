@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 export default function English() {
 
@@ -7,6 +8,7 @@ export default function English() {
 
    type Songdet = {
 
+      _id : string;
       songname:string;
       musicdirector:string;
       albumname:string;
@@ -22,7 +24,7 @@ export default function English() {
 
 
    useEffect(() => {
-    fetch('http://localhost:3001/song/lang')
+    fetch("http://localhost:3001/song")
       .then((response) => response.json())
       .then((data) => {
         console.log('API Response:', data);
@@ -51,7 +53,7 @@ export default function English() {
 
               <div className='flex flex-row border-2 border-green-500 w-full max-w-xl h-auto items-center justify-center'>
               <input type="text" placeholder='Search a song' className='w-full  py-2 px-2 text-black border-r-2 border-green-500 outline-none'/>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="w-12 lucide lucide-search cursor-pointer"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-12 lucide lucide-search cursor-pointer"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
               </div>
 
               <button className='border border-gray-600 rounded-xl px-4 py-2 hover:bg-green-400'>Playlists</button>
@@ -72,6 +74,8 @@ export default function English() {
         <div id='song' className='flex flex-col gap-4 py-4'>
 
          {songdetail.map((song) => (
+
+          <Link to={`/main/:user_id/song/${song._id}`}>
         
           <div className='flex flex-row px-8 items-center justify-between hover:border hover:border-gray-400 rounded-xl'>
 
@@ -112,7 +116,15 @@ export default function English() {
 
           </div>
 
-          ))}
+          </Link>
+
+          )
+          
+          )
+        
+        }
+
+         
 
         </div>
 
